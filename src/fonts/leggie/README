@@ -1,0 +1,89 @@
+Leggie
+------
+
+Leggie is a pleasant, legible monospaced (character cell) bitmap font. It was
+designed for readability and long work in a terminal. It's one of the very few
+sans-serif monospace fonts. Leggie is available in the following sizes:
+
+ - 6x12 px
+ - 9x14 px (EGA-style bold only)
+ - 9x16 px (VGA-style bold only)
+ - 9x18 px
+ - 12x24 px
+
+and styles:
+
+ - Normal
+ - Bold
+ - Italic
+ - Bold italic.
+
+I think leggie is more readable than Terminus, because the letters are slightly
+shorter, resulting in a bit more inter-line space (while still giving you the
+same number of lines).
+
+There is a good selection of glyphs available:
+
+ - ASCII
+ - ISO 8859-{1,2,3,4,5,7,8,9,10,13,14,15,16}
+ - IPA
+ - Microsoft WGL4
+ - VT100 graphics
+ - Common block drawing graphics
+ - Symbols from the default VGA font (a.k.a. Codepage 437)
+ - Some mathematics
+ - Powerline
+ - Nice punctuation
+ - Braille (3- and 4-row)
+ - ಠ_ಠ
+ - ...
+
+Overall, all living European languages and some Asian languages are supported.
+Currently supported scripts are: Armenian, Cyrillic, Georgian (Mkhedruli),
+Hebrew, Latin (including Vietnamese and Pinyin).
+
+I am always interested in adding new glyphs, so please let me know if there are
+any characters/languages that you need and I will try to add them.
+
+Bold and italic
+---------------
+
+The extra styles are still being tested and for now only contain the glyphs from
+the ISO 8859 charsets (all supported parts).
+
+Patches
+-------
+
+Version 0.1707.2 introduced optional patches. Look in the patches directory and
+if you see anything you like, just apply them: patch < patches/your.patch.
+
+Please send me your patches to <w@kerr.sh>. Make sure to include your name,
+email address, and a list of glyphs you've changed.
+
+Linux console fonts (PSF)
+-------------------------
+
+Version 2.1651 introduced support for generating Linux console fonts. Just run
+make psf. Make sure to have the bdf2psf program installed, it's available in
+most popular distributions and from
+https://packages.debian.org/sid/all/bdf2psf/download.
+
+Installing
+----------
+
+To only install the BDFs, run make installbdf. By default it installs to
+/usr/share/fonts. If you want to install to a custom directory, e.g. ~/.fonts,
+run make BDFDEST=~/.fonts installbdf.
+
+To install the PSFs, run make installpsf. By default it installs to
+/usr/share/consolefonts. Similar to the above, you can pass PSFDEST to install
+to a custom directory.
+
+To install both, run make install. You can still pass BDFDEST and PSFDEST.
+
+Legal
+-----
+
+Leggie is Copyright 2012-2018 Wiktor Kerr.
+Licensed under a Creative Commons Attribution 4.0 International License (CC BY).
+Please see the LICENCE file or https://creativecommons.org/licenses/by/4.0/.
